@@ -1,0 +1,11 @@
+- name: Understanding the gather facts
+  hosts: web
+  gather_facts: yes # Default is yes , we can make it no as well
+  
+  tasks:
+    - name: To see the all_ipv4_addresses
+      debug:
+        var: ansible_facts.all_ipv4_addresses 
+    - name: To see the ipv6 address
+      debug:
+        var: ansible_facts.all_ipv6_addresses 

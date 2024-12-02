@@ -1,0 +1,8 @@
+- name: Understanding the gather facts
+  hosts: web
+  gather_facts: yes # Default is yes , we can make it no as well
+  
+  tasks:
+    - name: To see the gather fact information
+      debug:
+        var: ansible_facts
